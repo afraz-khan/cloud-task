@@ -1,6 +1,7 @@
 # Terraform 🔁 CloudFormation
 
-Export the Terraform Outputs from Terraform-State-File and use them in your CloudFormation based infrastructure using CloudFormation-Custom-Resources.
+Export the Terraform Outputs from Terraform-State-File and use them in your CloudFormation based infrastructure using CloudFormation-Custom-Resources.  
+**_`Please note that, CloudFormation is used as target IAC in this task`_**
 
 #### 1. Create Terraform based infrastructure _(Optional)_
 Go into the folder named [_**http-alb**_](https://github.com/afraz-khan/cloud-task/tree/main/http-alb) which has HCL scripts to create http-based ALB that has a couple of ec2 instances behind the target-group.
