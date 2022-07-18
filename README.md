@@ -13,7 +13,7 @@ terraform apply
 > Its optional step, you can use [_**this**_](https://github.com/afraz-khan/cloud-task/blob/main/terraform.tfstate) sample terraform state file 
 
 #### 2. Upload the Terraform State FIle to S3
-   If you chose to execute step 1 then after successful execution, you will see a new file named `terraform.tfstate` in [_**http-alb**_](https://github.com/afraz-khan/cloud-task/tree/main/http-alb) folder otherwise you can use sample terraform state file [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/terraform.tfstate). 
+   If you chose to execute step 1 then after successful execution, you will see a new file named `terraform.tfstate` in [_**http-alb**_](https://github.com/afraz-khan/cloud-task/tree/main/http-alb) folder otherwise you can use sample terraform state file [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/terraform.tfstate).  
    Upload this file to an S3 bucket in your AWS account _(where you are going to deploy CloudFormation based infra)_.
 
 #### 3. Export Terraform Outputs in CloudFormation based infra
