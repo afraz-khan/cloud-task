@@ -33,4 +33,4 @@ Now, Create a stack in your AWS account _(where you are going to deploy CloudFor
 ---
 After successfull execution of the CloudFormation script🚀, you will be able to see the Outputs into your AWS Stack's **Outputs** section and these can be used across your CloudFormation based infra using the `!GetAtt` psuedo function. 🎊🔆
 
-Let me know if any changes/requirements needed or any confusions you experience 🙂 
+I have tried to explain everything but let me know if any changes/requirements needed or any confusions you experience 🙂 
