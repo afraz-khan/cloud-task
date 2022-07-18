@@ -2,19 +2,21 @@
 
 Export the Terraform Outputs from Terraform-State-File and use them in your CloudFormation based infrastructure using CloudFormation-Custom-Resources.
 
-##### 1. Create Terraform based infrastructure _(Optional)_
+#### 1. Create Terraform based infrastructure _(Optional)_
 Go into the folder named [_**http-alb**_](https://github.com/afraz-khan/cloud-task/tree/main/http-alb) which has HCL scripts to create http-based ALB that has a couple of ec2 instances behind the target-group.
 Use below commands in sequence to deploy through Terraform:  
-`terraform init`
-`terraform plan`
-`terraform apply`
+```
+terraform init
+terraform plan
+terraform apply
+```  
 > Its optional step, you can use [_**this**_](https://github.com/afraz-khan/cloud-task/blob/main/terraform.tfstate) sample terraform state file 
 
-##### 2. Upload the Terraform State FIle to S3
+#### 2. Upload the Terraform State FIle to S3
    If you chose to execute step 1 then after successful execution, you will see a new file named `terraform.tfstate` in [_**http-alb**_](https://github.com/afraz-khan/cloud-task/tree/main/http-alb) folder otherwise you can use sample terraform state file [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/terraform.tfstate). 
    Upload this file to an S3 bucket in your AWS account _(where you are going to deploy CloudFormation based infra)_.
 
-##### 3. Export Terraform Outputs in CloudFormation based infra
+#### 3. Export Terraform Outputs in CloudFormation based infra
 Open the CloudFormation script named `cross-site-cloudformation.yml` [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/cross-site-cloudformation.yml). 
 
 Open this file and navigate to the resource named `tfStateOutputsExport` in the **Resources** section. There is a list based property named `DesiredOutputs`. Enter names of the Terraform outputs that you want to export in your CloudFormation based infrastructure. If this list is empty then all outputs from your Terraform state file will be exported.
