@@ -1,4 +1,4 @@
-# Terraform ✖ CloudFormation
+# Terraform 🔁 CloudFormation
 
 Export the Terraform Outputs from Terraform-State-File and use them in your CloudFormation based infrastructure using CloudFormation-Custom-Resources.
 
@@ -12,11 +12,11 @@ terraform apply
 ```  
 > Its optional step, you can use [_**this**_](https://github.com/afraz-khan/cloud-task/blob/main/terraform.tfstate) sample terraform state file 
 
-#### 2. Upload the Terraform State FIle to S3
+#### 2. Upload the Terraform State FIle to S3 ⤴️
    If you chose to execute step 1 then after successful execution, you will see a new file named `terraform.tfstate` in [_**http-alb**_](https://github.com/afraz-khan/cloud-task/tree/main/http-alb) folder otherwise you can use sample terraform state file [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/terraform.tfstate).  
    Upload this file to an S3 bucket in your AWS account _(where you are going to deploy CloudFormation based infra)_.
 
-#### 3. Export Terraform Outputs in CloudFormation based infra
+#### 3. Export Terraform Outputs in CloudFormation based infra 🛠
 - Download the CloudFormation script named `cross-site-cloudformation.yml` from [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/cross-site-cloudformation.yml) and open in an editor. 
 - Navigate to a resource named `tfStateOutputsExport` in the **Resources** section. 
 - There is a list based property named `DesiredOutputs`. Enter names of the Terraform outputs that you want to export in your CloudFormation based infrastructure. If this list is empty then all outputs from your Terraform state file will be exported.
@@ -31,5 +31,6 @@ Now, Create a stack in your AWS account _(where you are going to deploy CloudFor
 - Outputs that you want to export into your CloudFormation infra
 
 ---
-After successfull execution of the CloudFormation script🚀, you will be able to see the Outputs into your AWS Stack's **Outputs** section and these can be used across your CloudFormation based infra using the `!GetAttr` psuedo function. 🎊🎊  
+After successfull execution of the CloudFormation script🚀, you will be able to see the Outputs into your AWS Stack's **Outputs** section and these can be used across your CloudFormation based infra using the `!GetAtt` psuedo function. 🎊🔆
+
 Let me know if any changes/requirements needed or any confusions you experience 🙂 
