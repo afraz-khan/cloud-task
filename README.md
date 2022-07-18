@@ -17,10 +17,10 @@ terraform apply
    Upload this file to an S3 bucket in your AWS account _(where you are going to deploy CloudFormation based infra)_.
 
 #### 3. Export Terraform Outputs in CloudFormation based infra
-Open the CloudFormation script named `cross-site-cloudformation.yml` [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/cross-site-cloudformation.yml). 
-
-Open this file and navigate to the resource named `tfStateOutputsExport` in the **Resources** section. There is a list based property named `DesiredOutputs`. Enter names of the Terraform outputs that you want to export in your CloudFormation based infrastructure. If this list is empty then all outputs from your Terraform state file will be exported.
-Also, in the **Outputs** section, use the Custom-Resource response data to export the outputs. Currently, two outputs are exported in the script, an ALB URL and instance id of one of the instances deployed through Terraform.
+- Download the CloudFormation script named `cross-site-cloudformation.yml` from [_**here**_](https://github.com/afraz-khan/cloud-task/blob/main/cross-site-cloudformation.yml) and open in an editor. 
+- Navigate to a resource named `tfStateOutputsExport` in the **Resources** section. 
+- There is a list based property named `DesiredOutputs`. Enter names of the Terraform outputs that you want to export in your CloudFormation based infrastructure. If this list is empty then all outputs from your Terraform state file will be exported.
+- In the **Outputs** section, use the Custom-Resource response data to export the outputs. Currently, two outputs are exported in the script, an ALB URL and instance-id of one of the ec2 instances deployed through Terraform.
 
 After making your desired changes, save the script.
 
